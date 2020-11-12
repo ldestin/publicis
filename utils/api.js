@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 const PAGE_SIZE = 10
 const TOP_NEWS_URL = 'https://hn.algolia.com/api/v1/search'
-const FRONT_NEWS_URL = 'http://hn.algolia.com/api/v1/search?tags=front_page'
+const FRONT_NEWS_URL = 'https://hn.algolia.com/api/v1/search?tags=front_page'
 const LATEST_NEWS_URL = 'https://hn.algolia.com/api/v1/search_by_date'
 
 const getMaxPoints = async () => {

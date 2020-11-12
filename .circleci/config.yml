@@ -8,11 +8,8 @@ jobs:
     docker:
       - image: 'cimg/base:stable'
     steps:
-      - checkout
-      - node/install:
-          install-yarn: true
-      - run: yarn --frozen-lockfile
-      - run: yarn test
+      - attach_workspace:
+          at: .
       - run:
           name: Install heroku then push
           command: |
@@ -25,8 +22,34 @@ jobs:
               login $HEROKU_USERNAME
               password $HEROKU_API_KEY" > ~/.netrc
             git push heroku main:master
+  testing:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - run: yarn --frozen-lockfile
+      - persist_to_workspace:
+          root: .
+          paths:
+            - "*"
+      - run: yarn build
+      - run: yarn test
 
 workflows:
   ci:
     jobs:
-      - deploying
+      - testing
+      - approve_deployment:
+          name: "approve-deployment"
+          type: approval
+          requires:
+            - testing
+          filters:
+            branches:
+              only:
+                - main
+      - deploying:
+          requires:
+            - "approve-deployment"

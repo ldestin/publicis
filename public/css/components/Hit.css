@@ -1,0 +1,64 @@
+.hit {
+  display: flex;
+  padding: 4px 2rem;
+}
+
+.hit:nth-child(even) {
+  background: rgba(0, 0, 0, .1);
+}
+
+.hit .col:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.hit .line {
+  display: contents;
+}
+
+.hit .line:not(:last-child) {
+  margin-top: 1rem;
+}
+
+.hit .numbers {
+  justify-content: center;
+}
+
+.hit .label {
+  display: none;
+  margin-left: 1rem;
+}
+
+.hit .nb-comments,
+.hit .points {
+  flex-shrink: 0;
+  width: 3rem;
+  text-align: end;
+}
+
+.hit .upvote-button {
+  margin-left: .5rem;
+}
+
+.hit .upvote-button::before {
+  content: '▲';
+  color: var(--grey);
+}
+
+@media (max-width: 700px) {
+  .hit {
+    flex-direction: column-reverse;
+  }
+
+  .hit .label {
+    display: inline;
+  }
+
+  .hit .line {
+    display: flex;
+    align-items: center;
+  }
+
+  .hit .numbers {
+    font-size: var(--small-font-size);
+  }
+}

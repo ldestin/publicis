@@ -1,0 +1,13 @@
+.chart {
+  padding: 1rem 2rem;
+}
+
+.chart canvas {
+  background: var(--white)
+}
+
+@media (max-width: 1000px) {
+  .chart {
+    display: none;
+  }
+}

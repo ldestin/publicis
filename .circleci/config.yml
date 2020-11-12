@@ -1,0 +1,32 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.1.0
+
+jobs:
+  deploying:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+      - run: yarn --frozen-lockfile
+      - run: yarn test
+      - run:
+          name: Install heroku then push
+          command: |
+            curl https://cli-assets.heroku.com/install.sh | sh
+            heroku git:remote -a $HEROKU_APP_NAME
+            echo "machine api.heroku.com
+              login $HEROKU_USERNAME
+              password $HEROKU_API_KEY
+            machine git.heroku.com
+              login $HEROKU_USERNAME
+              password $HEROKU_API_KEY" > ~/.netrc
+            git push heroku main:master
+
+workflows:
+  ci:
+    jobs:
+      - deploying

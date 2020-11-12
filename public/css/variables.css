@@ -1,0 +1,11 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --grey: #828282;
+  --orange: #ff6600;
+
+  --grey-bg: #f6f6ef;
+
+  --default-font-size: 10pt;
+  --small-font-size: 8pt;
+}

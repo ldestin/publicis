@@ -1,0 +1,55 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--black);
+  font-size: var(--default-font-size);
+}
+
+#__next {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  visibility: hidden;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.small {
+  font-size: var(--small-font-size);
+}
+
+.grey {
+  color: var(--grey);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+}
+
+.buttons .button:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button.selected {
+  cursor: default;
+}
+
+@media (max-width: 700px) {
+  #__next {
+    align-items: stretch;
+  }
+}

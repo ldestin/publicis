@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hits component shouold render correctly 1`] = `
+<div>
+  <div
+    class="hits"
+  >
+    <div>
+      Hit: 
+      {
+  "hit": {
+    "objectID": "1",
+    "points": 5
+  },
+  "color": "rgb(128, 51, 0)"
+}
+    </div>
+    <div>
+      Hit: 
+      {
+  "hit": {
+    "objectID": "2",
+    "points": 10
+  },
+  "color": "rgb(255, 102, 0)"
+}
+    </div>
+  </div>
+</div>
+`;

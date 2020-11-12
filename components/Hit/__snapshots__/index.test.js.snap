@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hit component should render correctly 1`] = `
+<div>
+  <div
+    class="hit"
+  >
+    <span
+      class="line numbers"
+    >
+      <span
+        class="col nb-comments"
+      >
+        6
+      </span>
+       
+      <span
+        class="label"
+      >
+        comment
+        s
+      </span>
+      <span
+        class="col points"
+        style="color: rgb(255, 0, 0);"
+      >
+        13
+      </span>
+       
+      <span
+        class="label"
+      >
+        point
+        s
+      </span>
+    </span>
+    <div
+      class="line"
+    >
+      <div
+        class="col button upvote-button"
+      />
+       
+      <span
+        class="col description"
+      >
+        <a
+          href="url"
+        >
+          title
+        </a>
+         
+        <span
+          class="small grey"
+        >
+          by 
+        </span>
+        <span>
+          author
+        </span>
+         
+        <span
+          class="small grey"
+        >
+          20 hours ago
+        </span>
+         
+        <span
+          class="button hide-button small"
+        >
+          <span
+            class="grey"
+          >
+            [
+          </span>
+          hide
+          <span
+            class="grey"
+          >
+            ]
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Hit component should render correctly with empty hit 1`] = `
+<div>
+  <div
+    class="hit"
+  >
+    <span
+      class="line numbers"
+    >
+      <span
+        class="col nb-comments"
+      >
+        0
+      </span>
+       
+      <span
+        class="label"
+      >
+        comment
+        
+      </span>
+      <span
+        class="col points"
+        style="color: rgb(255, 0, 0);"
+      >
+        0
+      </span>
+       
+      <span
+        class="label"
+      >
+        point
+        
+      </span>
+    </span>
+    <div
+      class="line"
+    >
+      <div
+        class="col button upvote-button"
+      />
+       
+      <span
+        class="col description"
+      >
+        <span
+          class="button hide-button small"
+        >
+          <span
+            class="grey"
+          >
+            [
+          </span>
+          hide
+          <span
+            class="grey"
+          >
+            ]
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;

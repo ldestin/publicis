@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should initialize chart correctly 1`] = `
+<div>
+  <div
+    class="chart"
+  >
+    <canvas
+      height="100"
+      width="400"
+    />
+  </div>
+</div>
+`;

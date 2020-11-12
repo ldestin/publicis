@@ -1,0 +1,9 @@
+@import './reset.css';
+@import './variables.css';
+@import './global.css';
+
+/* COMPONENTS */
+@import './components/News.css';
+@import './components/Hits.css';
+@import './components/Hit.css';
+@import './components/Chart.css';

@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div>
+  <div
+    class="news"
+  >
+    <div
+      class="header"
+    >
+      <img
+        alt="logo"
+        class="logo"
+        src="/images/logo.gif"
+      />
+      <div
+        class="links"
+      >
+        <a
+          class="button link top selected"
+        >
+          top
+        </a>
+         | 
+        <a
+          class="button link new"
+          href="new"
+        >
+          new
+        </a>
+      </div>
+    </div>
+    <div>
+      Hits: 
+      {
+  "hits": [
+    {}
+  ],
+  "maxPoints": 10
+}
+    </div>
+    <div
+      class="buttons"
+    >
+      <div
+        class="button prev-button"
+      >
+        Prev
+      </div>
+      <div
+        class="button next-button"
+      >
+        Next
+      </div>
+    </div>
+    <div>
+      Chart: 
+      {
+  "hits": [
+    {}
+  ]
+}
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render correctly on first page 1`] = `
+<div>
+  <div
+    class="news"
+  >
+    <div
+      class="header"
+    >
+      <img
+        alt="logo"
+        class="logo"
+        src="/images/logo.gif"
+      />
+      <div
+        class="links"
+      >
+        <a
+          class="button link top selected"
+        >
+          top
+        </a>
+         | 
+        <a
+          class="button link new"
+          href="new"
+        >
+          new
+        </a>
+      </div>
+    </div>
+    <div>
+      Hits: 
+      {
+  "hits": [
+    {}
+  ],
+  "maxPoints": 10
+}
+    </div>
+    <div
+      class="buttons"
+    >
+      <div
+        class="button next-button"
+      >
+        Next
+      </div>
+    </div>
+    <div>
+      Chart: 
+      {
+  "hits": [
+    {}
+  ]
+}
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render correctly on last page 1`] = `
+<div>
+  <div
+    class="news"
+  >
+    <div
+      class="header"
+    >
+      <img
+        alt="logo"
+        class="logo"
+        src="/images/logo.gif"
+      />
+      <div
+        class="links"
+      >
+        <a
+          class="button link top selected"
+        >
+          top
+        </a>
+         | 
+        <a
+          class="button link new"
+          href="new"
+        >
+          new
+        </a>
+      </div>
+    </div>
+    <div>
+      Hits: 
+      {
+  "hits": [
+    {}
+  ],
+  "maxPoints": 10
+}
+    </div>
+    <div
+      class="buttons"
+    >
+      <div
+        class="button prev-button"
+      >
+        Prev
+      </div>
+    </div>
+    <div>
+      Chart: 
+      {
+  "hits": [
+    {}
+  ]
+}
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render correctly without hits 1`] = `
+<div>
+  <div
+    class="news"
+  >
+    <div
+      class="header"
+    >
+      <img
+        alt="logo"
+        class="logo"
+        src="/images/logo.gif"
+      />
+      <div
+        class="links"
+      >
+        <a
+          class="button link top selected"
+        >
+          top
+        </a>
+         | 
+        <a
+          class="button link new"
+          href="new"
+        >
+          new
+        </a>
+      </div>
+    </div>
+    <div>
+      Hits: 
+      {
+  "hits": []
+}
+    </div>
+    <div
+      class="buttons"
+    />
+    <div>
+      Chart: 
+      {
+  "hits": []
+}
+    </div>
+  </div>
+</div>
+`;

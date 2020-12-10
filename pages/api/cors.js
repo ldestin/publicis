@@ -25,7 +25,7 @@ export default async function handler(req, res) {
   await runMiddleware(req, res, cors)
 
   console.log({ res })
-  req.send(`<!DOCTYPE html>
+  res.send(`<!DOCTYPE html>
   <html>
     <head>
       <title>!Add your title here!</title>

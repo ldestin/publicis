@@ -16,6 +16,6 @@ export default () => (
   <div>
     test
     <div id="api"></div>
-    <script>console.log('lol')</script>
+    <script dangerouslySetInnerHTML={{ __html: 'console.log("lol")' }}></script>
   </div>
 )

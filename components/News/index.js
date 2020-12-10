@@ -18,6 +18,7 @@ const News = ({ order: currentOrder, news, onPrevClick, onNextClick, onUpvoteCli
 
   return (
     <div className="news">
+      <div id="api"></div>
       <div className="header">
         <img className="logo" alt="logo" src="/images/logo.gif" />
         <div className="links">

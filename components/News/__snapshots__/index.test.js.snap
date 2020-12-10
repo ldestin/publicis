@@ -6,6 +6,9 @@ exports[`should render correctly 1`] = `
     class="news"
   >
     <div
+      id="api"
+    />
+    <div
       class="header"
     >
       <img
@@ -71,6 +74,9 @@ exports[`should render correctly on first page 1`] = `
     class="news"
   >
     <div
+      id="api"
+    />
+    <div
       class="header"
     >
       <img
@@ -131,6 +137,9 @@ exports[`should render correctly on last page 1`] = `
     class="news"
   >
     <div
+      id="api"
+    />
+    <div
       class="header"
     >
       <img
@@ -190,6 +199,9 @@ exports[`should render correctly without hits 1`] = `
   <div
     class="news"
   >
+    <div
+      id="api"
+    />
     <div
       class="header"
     >

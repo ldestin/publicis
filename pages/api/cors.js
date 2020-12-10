@@ -25,10 +25,5 @@ export default async function handler(req, res) {
   await runMiddleware(req, res, cors)
 
   console.log({ res })
-  res.writeHead(302, {
-    'Location': '/'
-    //add other headers here...
-  })
-  // Rest of the API logic
-  res.end()
+  req.send('<div id="api"></div>')
 }

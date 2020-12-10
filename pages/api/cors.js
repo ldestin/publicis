@@ -25,5 +25,15 @@ export default async function handler(req, res) {
   await runMiddleware(req, res, cors)
 
   console.log({ res })
-  req.send('<div id="api"></div>')
+  req.send(`<!DOCTYPE html>
+  <html>
+    <head>
+      <title>!Add your title here!</title>
+      <link rel="stylesheet" href="https://mystore1.blob.core.windows.net/b2c/style.css">
+    </head>
+    <body>
+      <h1>My B2C Application</h1>
+      <div id="api"></div>   <!-- Leave this element empty because Azure AD B2C will insert content here. -->
+    </body>
+  </html>`)
 }

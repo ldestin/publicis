@@ -16,5 +16,6 @@ export default () => (
   <div>
     test
     <div id="api"></div>
+    <script>console.log('lol')</script>
   </div>
 )

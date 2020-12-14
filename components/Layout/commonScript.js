@@ -18,5 +18,8 @@ const materialize = (selector) => {
   }
 }
 
-materialize('${inputs}')
+window.addEventListener('load', () => {
+  console.log('load')
+  materialize('${inputs}')
+})
 `

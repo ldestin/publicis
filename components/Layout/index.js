@@ -6,8 +6,9 @@ import Footer from './footer';
 const Layout = ({ children }) => {
   return (
     <div class="container">
-      <Header />
+      <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.production.min.js"></script>
       <script src="https://snprfrontendadb2c.blob.core.windows.net/root/test.js"></script>
+      <Header />
       <div class="api-container">
         {children}
       </div>

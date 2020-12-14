@@ -1,13 +1,20 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import router from 'next/router'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
+    const { req, res } = ctx
+    const isLayout = req.url.startsWith('/test')
     const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
+    // const router = useRouter()
+    console.log({ isLayout, router, initialProps, req, res })
+    return { ...initialProps, isLayout }
   }
 
   render() {
+    const { isLayout } = this.props
+    console.log({ isLayout })
     return (
       <Html lang="en">
         <Head>

@@ -1,0 +1,30 @@
+import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/addon-docs/blocks';
+import { ThemeProvider } from '@spark/themes';
+import { theme } from '@spark/themes/default';
+const { palette } = theme;
+const notPalette = ['type', 'contrastThreshold', 'getContrastText', 'augmentColor', 'divider', 'tonalOffset', 'action'];
+
+<Meta title="Core|Palettes" />
+
+# Palettes
+
+<br />
+
+##### The palette enables you to modify the color of the components to suit the brand
+
+[More on Palette](https://material-ui.com/system/palette/)
+
+<br />
+<br />
+
+#### Values
+
+<ColorPalette>
+  {Object.keys(palette).map((item) =>
+    !notPalette.includes(item) ? (
+      <ColorItem title={`theme.palette.${item}`} subtitle={[...Object.keys(palette[item])].join(' | ')} colors={[...Object.values(palette[item])]} />
+    ) : (
+      ''
+    ),
+  )}
+</ColorPalette>

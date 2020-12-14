@@ -1,4 +1,7 @@
 import React from 'react'
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+import Layout from '../components/Layout'
 import Cors from 'cors'
 
 const cors = Cors({
@@ -13,9 +16,14 @@ export const getServerSideProps = async ({ req, res }) => {
 }
 
 export default () => (
-  <div>
+  <Layout>
     test
+    <Button variant="contained" color="primary">PRIMARY</Button>
+    <TextField label="lol" />
+    <div>
+      <input className="inputText" placeholder="lol2" />
+    </div>
     <div id="api"></div>
     <script dangerouslySetInnerHTML={{ __html: 'console.log("lol")' }}></script>
-  </div>
+  </Layout>
 )

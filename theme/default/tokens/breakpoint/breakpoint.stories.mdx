@@ -1,0 +1,46 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Grid, Typography, Box } from '@material-ui/core';
+import { sparkTheme, ThemeProvider } from '../../../../themes';
+import breakpoint from './breakpoint';
+
+export const breakpointLabel = {
+  xs: 'Mobile',
+  sm: 'Tablet (Portrait)',
+  md: 'Tablet (Landscape)',
+  lg: 'Desktop',
+};
+
+<Meta title="Core|Breakpoints" />
+
+# Breakpoints
+
+<br />
+
+##### Breakpoints are the point a which sites content will respond to provide the user with the best possible layout to consume the information.
+
+[More on Breakpoints](https://material-ui.com/customization/breakpoints/)
+
+<br />
+<br />
+
+#### Values
+
+<Preview>
+  <ThemeProvider>
+    {Object.keys(breakpoint.values).map((item, index) => (
+      <Grid container alignItems="center" wrap="nowrap">
+        <Grid item style={{ width: '150px', flexShrink: 0 }}>
+          <Box p={1}>
+            <Typography variant="caption">{breakpointLabel[item]}</Typography>
+          </Box>
+        </Grid>
+        <Grid item style={{ width: '50px', margin: '20px', flexShrink: 0 }}>
+          <Typography variant="caption">{`${breakpoint.values[item]}px`}</Typography>
+        </Grid>
+        <Grid item style={{ paddingRight: '20px' }}>
+          <Box bgcolor="primary.main" color="primary.contrastText" p={1} my={1.5} width={`${breakpoint.values[item]}px`}></Box>
+        </Grid>
+      </Grid>
+    ))}
+  </ThemeProvider>
+</Preview>

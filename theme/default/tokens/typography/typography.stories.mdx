@@ -1,0 +1,96 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Grid, Typography } from '@material-ui/core';
+import { ThemeProvider } from '@spark/themes';
+import { theme } from '@spark/themes/default';
+const { typography } = theme;
+export const text = 'The quick brown fox jumps over the lazy dog';
+const notMixin = [
+  'htmlFontSize',
+  'fontFamily',
+  'fontSize',
+  'fontWeightLight',
+  'fontWeightRegular',
+  'fontWeightMedium',
+  'fontWeightBold',
+  'fontWeightBlack',
+  'fontSizes',
+  'lineHeights',
+  'letterSpacings',
+];
+
+export const fontWeights = {
+  light: typography.fontWeightLight,
+  regular: typography.fontWeightRegular,
+  medium: typography.fontWeightMedium,
+  bold: typography.fontWeightBold,
+  black: typography.fontWeightBlack,
+};
+
+<Meta title="Core|Typography" />
+
+# Typography
+
+<br />
+
+##### Font family, sizes, weights for the brand.
+
+[More on Typography](https://material-ui.com/customization/typography/)
+
+<br />
+<br />
+
+#### Values
+
+<Preview>
+  <ThemeProvider>
+    <Grid container alignItems="center" wrap="nowrap">
+      <Grid item style={{ width: '100px', flexShrink: 0 }}>
+        <Typography variant="body2">Family:</Typography>
+      </Grid>
+      <Grid item style={{ margin: '20px', flexShrink: 0 }}>
+        <Typography variant="h4">NotoSans</Typography>
+      </Grid>
+    </Grid>
+    <Grid container alignItems="center" wrap="nowrap">
+      <Grid item style={{ width: '100px', flexShrink: 0 }}>
+        <Typography variant="body2">Size (Body):</Typography>
+      </Grid>
+      <Grid item style={{ margin: '20px', flexShrink: 0 }}>
+        <Typography variant="body2">14px</Typography>
+      </Grid>
+    </Grid>
+    <Grid container alignItems="center" wrap="nowrap">
+      <Grid item style={{ width: '100px', flexShrink: 0 }}>
+        <Typography variant="body2">Font Weights:</Typography>
+      </Grid>
+      <Grid item container style={{ margin: '20px', flexShrink: 0 }}>
+        {Object.keys(fontWeights).map((item, index) => (
+          <Typography style={{ marginRight: '20px', fontWeight: fontWeights[item] }}>{item}</Typography>
+        ))}
+      </Grid>
+    </Grid>
+  </ThemeProvider>
+</Preview>
+
+<br />
+
+#### Variant
+
+<Preview>
+  <ThemeProvider>
+    {Object.keys(typography).map((item, index) =>
+      !notMixin.includes(item) ? (
+        <Grid container alignItems="center" wrap="nowrap">
+          <Grid item style={{ width: '100px', flexShrink: 0 }}>
+            <Typography variant={item}>{item}</Typography>
+          </Grid>
+          <Grid item style={{ margin: '20px', flexShrink: 0 }}>
+            <Typography variant={item}>{text}</Typography>
+          </Grid>
+        </Grid>
+      ) : (
+        ''
+      ),
+    )}
+  </ThemeProvider>
+</Preview>

@@ -1,0 +1,43 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Grid, Typography, Box } from '@material-ui/core';
+import { sparkTheme, ThemeProvider } from '../../../../themes';
+
+<Meta title="Core|Spacing" />
+
+# Spacing
+
+<br />
+
+##### Spacing values are used to add space within or around the elements.
+
+[More on Spacing](https://material-ui.com/system/spacing/)
+
+<br />
+<br />
+
+#### Values
+
+<Preview>
+  <ThemeProvider>
+    {Array(20)
+      .fill()
+      .map((item, index) => (
+        <Grid container alignItems="center">
+          <Grid item style={{ width: '150px', flexShrink: 0, textAlign: 'center' }}>
+            <Typography variant="caption">spacing({`${(index + 1) / 2}`})</Typography>
+          </Grid>
+          <Grid item style={{ width: '150px', flexShrink: 0, textAlign: 'center' }}>
+            <Typography variant="caption">{`${(index + 1) * 0.25} rem`}</Typography>
+          </Grid>
+          <Grid item style={{ width: '150px', flexShrink: 0, textAlign: 'center' }}>
+            <Typography variant="caption">{`${(index + 1) * 0.25 * 16} px`}</Typography>
+          </Grid>
+          <Grid item>
+            <div style={{ padding: sparkTheme.spacing((index + 1) / 2), flexShrink: 0, margin: '20px', backgroundColor: 'rgb(33, 150, 243)' }}>
+              <div style={{ width: '20px', height: '20px', backgroundColor: '#FFF' }}>&nbsp;</div>
+            </div>
+          </Grid>
+        </Grid>
+      ))}
+  </ThemeProvider>
+</Preview>

@@ -17,7 +17,6 @@ class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx)
 
     // const router = useRouter()
-    console.log({ isLayout, router, initialProps, req, res })
     return {
       ...initialProps,
       isLayout,

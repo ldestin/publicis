@@ -93,8 +93,7 @@ export const resetStyles = `
   /* END OVERRIDES */
   
   .inputControl {
-    position: relative;
     width: 100%;
-    margin: 32px 0;
+    margin: 32px 0 !important;
   }
 `;

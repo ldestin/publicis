@@ -2,40 +2,47 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) =>
   createStyles({
-    root: {
-      flexGrow: 1,
-      '& ul': {
-        margin: 0,
-        padding: 0,
-        listStyleType: 'none',
-      },
+    footer: {
+      width: '100%',
+      fontSize: theme.typography.fontSize.xs,
+      color: 'rgba(0, 0, 0, 0.54)',
     },
-    header: {
+    footerContainer: {
       display: 'flex',
+      flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'space-between',
-      paddingRight: theme.spacing(4),
       width: '100%',
-      height: theme.spacing(9),
-      boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.07)',
+      padding: '16px',
+      minHeight: '80px',
+      borderTop: '0.5px solid #E0E0E0',
+      [theme.breakpoints.up('sm')]: {
+        padding: '16px 40px',
+      },
+      [theme.breakpoints.up('md')]: {
+        flexDirection: 'unset',
+        justifyContent: 'space-between',
+      },
     },
-    arrow: {
-
+    links: {
+      display: 'flex',
     },
-    backButton: {
-
+    link: {
+      '&:not(:first-child)': {
+        marginLeft: '16px',
+      }
     },
-    logo: {
-
+    copyright: {
+      marginRight: '16px',
     },
-    contact: {
-
+    juridic: {
+      display: 'flex',
     },
-    number: {
-
+    socials: {
+      opacity: 0.54,
+      '& a:not(:first-child)': {
+        marginLeft: '16px',
+      },
     },
-    phoneIcon: {
-
-    }
   }),
 );

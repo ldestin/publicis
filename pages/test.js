@@ -17,7 +17,6 @@ export const getServerSideProps = async ({ req, res }) => {
 
 export default () => (
   <Layout>
-    <TextField label="lol" value="test" />
     <div id="api"></div>
   </Layout>
 )

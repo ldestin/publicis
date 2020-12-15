@@ -2,14 +2,6 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) =>
   createStyles({
-    root: {
-      flexGrow: 1,
-      '& ul': {
-        margin: 0,
-        padding: 0,
-        listStyleType: 'none',
-      },
-    },
     header: {
       display: 'flex',
       alignItems: 'center',

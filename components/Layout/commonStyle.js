@@ -11,6 +11,10 @@ export const resetStyles = `
     margin: 0;
   }
 
+  #__next {
+    display: contents;
+  }
+
   .hidden,
   .helpLink,
   .changeClaims,

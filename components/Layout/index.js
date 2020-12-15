@@ -12,7 +12,6 @@ const Layout = ({ children }) => {
     <div className={classes.container}>
       <Head>
         <link rel="stylesheet" href="https://snprfrontendadb2c.blob.core.windows.net/root/custom-ui.css" />
-        <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.production.min.js"></script>
         <style>{resetStyles}</style>
       </Head>
       <script src="https://snprfrontendadb2c.blob.core.windows.net/root/test.js"></script>

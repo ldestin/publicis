@@ -15,6 +15,10 @@ export const resetStyles = `
     display: contents;
   }
 
+  .itemLevel {
+    display: none !important;
+  }
+
   .hidden,
   .helpLink,
   .changeClaims,

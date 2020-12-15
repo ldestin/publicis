@@ -1,4 +1,5 @@
 export const resetStyles = `
+  /* ACTIVE DIRECTORY OVERRIDES */
   html, body {
     height: 100%;
     width: 100%;
@@ -59,6 +60,12 @@ export const resetStyles = `
   #api {
     width: 420px;
   }
+  
+  .intro {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+  }
 
   form {
     margin-top: 64px;
@@ -82,5 +89,12 @@ export const resetStyles = `
     color: rgba(0, 0, 0, 0.54);
     text-align: center;
     margin-top: 32px;
+  }
+  /* END OVERRIDES */
+  
+  .inputControl {
+    position: relative;
+    width: 100%;
+    margin: 32px 0;
   }
 `;

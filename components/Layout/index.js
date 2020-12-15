@@ -4,6 +4,7 @@ import { generateScript } from './commonScript'
 import Header from './header';
 import Footer from './footer';
 import { useStyles } from './index.style'
+import { resetStyles } from './commonStyle';
 
 const Layout = ({ children }) => {
   const classes = useStyles()
@@ -12,6 +13,7 @@ const Layout = ({ children }) => {
       <Head>
         <link rel="stylesheet" href="https://snprfrontendadb2c.blob.core.windows.net/root/custom-ui.css" />
         <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.production.min.js"></script>
+        <style>{resetStyles}</style>
       </Head>
       <script src="https://snprfrontendadb2c.blob.core.windows.net/root/test.js"></script>
       <Header />

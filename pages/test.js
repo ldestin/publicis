@@ -15,9 +15,11 @@ export const getServerSideProps = async ({ req, res }) => {
   return { props: {} }
 }
 
-export default () => (
+const Test = () => (
   <Layout>
-    <TextField style={{ display: 'none' }} focused error label="test" />
+    <TextField style={{ display: 'none' }} focused error label="test" helperText="test" />
     <div id="api"></div>
   </Layout>
 )
+
+export default Test

@@ -104,7 +104,6 @@ export const commonStyles = `
     width: 100%;
     margin-bottom: 32px !important;
   }
-
   button.MuiButtonBase-root  {
     display: flex;
     align-items: center;
@@ -118,12 +117,13 @@ export const commonStyles = `
     color: #1E5BF6;
     cursor: pointer;
   }
-
   .MuiInputBase-root.MuiInput-underline:after {
     border-bottom: 2px solid #1E5BF6;
   }
+  .MuiFormLabel-root.MuiInputLabel-formControl.Mui-focused {
+    color: #1E5BF6;
+  }
 
-  .MuiFormLabel-root.MuiInputLabel-formControl.Mui-focused,
   button.MuiButtonBase-root:hover,
   button.MuiButtonBase-root:focus {
     color: #083CBF;

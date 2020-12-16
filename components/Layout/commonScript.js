@@ -93,6 +93,6 @@ const materializeContainedButtons = selector => {
   }
 }
 
-materializeContainedButtons('button')
+materializeContainedButtons('button:not(.nativeButton)')
 materializeTextFields('.textInput')
 `

@@ -94,7 +94,7 @@ const script = `
 
 const Test = () => (
   <Layout script={script}>
-    <Button id="backToLoginButton" className="formButton" color="tertiary" size="large">Back to login</Button>
+    <Button id="backToLoginButton" className="nativeButton" color="tertiary" size="large">Back to login</Button>
     <Button style={{ display: 'none' }} variant="contained" color="tertiary">Test</Button>
     <MuiButton style={{ display: 'none' }} variant="contained" color="primary"><div>Test</div>Test</MuiButton>
     <TextField style={{ display: 'none' }} focused error label="test" helperText="test" />

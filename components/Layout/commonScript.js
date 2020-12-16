@@ -1,4 +1,4 @@
-export const generateScript = ({ inputs }) => `
+export const generateScript = ({ inputs } = {}) => `
 const materializeTextFields = selector => {
   if (selector) {
     const focusedClassName = 'Mui-focused'

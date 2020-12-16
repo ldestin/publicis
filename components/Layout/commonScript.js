@@ -76,7 +76,7 @@ const materializeButtons = selector => {
 
       label.className = 'MuiButton-label'
       rippleRoot.className = 'MuiTouchRipple-root'
-      button.classList.add('MuiButtonBase-root', 'MuiButton-root', 'MuiButton-containedPrimary', 'materializedButton')
+      button.classList.add('MuiButtonBase-root', 'MuiButton-root', 'MuiButton-containedPrimary')
       button.appendChild(rippleRoot)
     })
 
@@ -93,6 +93,6 @@ const materializeContainedButtons = selector => {
   }
 }
 
-materializeContainedButtons('button:not(.nativeButton)')
+materializeContainedButtons('#api button')
 materializeTextFields('.textInput')
 `

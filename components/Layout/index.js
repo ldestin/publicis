@@ -21,6 +21,7 @@ const Layout = ({ children, script, styles }) => {
         {children}
       </div>
       <Footer />
+      <script dangerouslySetInnerHTML={{ __html: generateScript() }}></script>
       {script && <script dangerouslySetInnerHTML={{ __html: script }}></script>}
     </div>
   );

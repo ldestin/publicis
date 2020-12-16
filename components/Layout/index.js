@@ -11,7 +11,6 @@ const Layout = ({ children, script, styles }) => {
   return (
     <div className={classes.container}>
       <Head>
-        <link rel="stylesheet" href="https://snprfrontendadb2c.blob.core.windows.net/root/custom-ui.css" />
         <style>{commonStyles}</style>
         {styles && <style>{styles}</style>}
       </Head>

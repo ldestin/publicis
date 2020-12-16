@@ -102,7 +102,7 @@ export const commonStyles = `
   
   .materializedInput {
     width: 100%;
-    margin: 32px 0 !important;
+    margin-bottom: 32px !important;
   }
 
   button.MuiButtonBase-root  {

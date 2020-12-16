@@ -1,4 +1,4 @@
-export const generateScript = ({ inputs } = {}) => `
+export const materialize = ({ textFields = '#api .textInput', simpleButtons = '#api button', containedButtons  } = {}) => `
 const materializeTextFields = selector => {
   if (selector) {
     const focusedClassName = 'Mui-focused'
@@ -93,6 +93,7 @@ const materializeContainedButtons = selector => {
   }
 }
 
-materializeContainedButtons('#api button')
-materializeTextFields('.textInput')
+materializeButtons('${simpleButtons}')
+materializeContainedButtons('${containedButtons}')
+materializeTextFields('${textFields}')
 `

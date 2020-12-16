@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
-import { generateScript } from './commonScript'
+import { materialize } from './commonScripts'
 import Header from './header';
 import Footer from './footer';
 import { useStyles } from './index.style'
 import { commonStyles } from './commonStyle';
 
-const Layout = ({ children, script, styles }) => {
+const Layout = ({ children, script, styles, materialSelectors }) => {
   const classes = useStyles()
   return (
     <div className={classes.container}>
@@ -19,7 +19,7 @@ const Layout = ({ children, script, styles }) => {
         {children}
       </div>
       <Footer />
-      <script dangerouslySetInnerHTML={{ __html: generateScript() }}></script>
+      <script dangerouslySetInnerHTML={{ __html: materialize(materialSelectors) }}></script>
       {script && <script dangerouslySetInnerHTML={{ __html: script }}></script>}
     </div>
   );

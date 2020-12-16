@@ -90,10 +90,31 @@ export const resetStyles = `
     text-align: center;
     margin-top: 32px;
   }
-  /* END OVERRIDES */
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons.reverse {
+    flex-direction: row-reverse;
+  }
+  /* END API OVERRIDES */
   
-  .inputControl {
+  .materializedInput {
     width: 100%;
     margin: 32px 0 !important;
+  }
+
+  .materializedButton {
+    background: #1E5BF6;
+  }
+
+  .materializedButton:hover,
+  .materializedButton:focus {
+    background: #083CBF;
+  }
+
+  .materializedButton:active {
+    background: #5885F9;
   }
 `;

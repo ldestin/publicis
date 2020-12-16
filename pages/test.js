@@ -1,8 +1,9 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
+import Cors from 'cors'
+import MuiButton from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import Layout from '../components/Layout'
-import Cors from 'cors'
+import { Button } from '../components/button'
 
 const cors = Cors({
   // Only allow requests with GET, POST and OPTIONS
@@ -17,6 +18,8 @@ export const getServerSideProps = async ({ req, res }) => {
 
 const Test = () => (
   <Layout>
+    <Button style={{ display: 'none' }} variant="contained" color="tertiary">Test</Button>
+    <MuiButton style={{ display: 'none' }} variant="contained" color="primary"><div>Test</div>Test</MuiButton>
     <TextField style={{ display: 'none' }} focused error label="test" helperText="test" />
     <div id="api"></div>
   </Layout>

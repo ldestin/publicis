@@ -1,4 +1,4 @@
-export const materialize = ({ textFields = '#api .textInput', simpleButtons = '#api button', containedButtons  } = {}) => `
+export const materialize = ({ textFields, textButtons, containedButtons  } = {}) => `
 const materializeTextFields = selector => {
   if (selector) {
     const focusedClassName = 'Mui-focused'
@@ -67,17 +67,14 @@ const materializeTextFields = selector => {
   }
 }
 
-const materializeButtons = selector => {
+const materializeTextButtons = selector => {
   if (selector) {
     const buttons = document.querySelectorAll(selector)
     buttons.forEach(button => {
       const label = document.createElement('span')
-      const rippleRoot = document.createElement('span')
 
       label.className = 'MuiButton-label'
-      rippleRoot.className = 'MuiTouchRipple-root'
-      button.classList.add('MuiButtonBase-root', 'MuiButton-root', 'MuiButton-containedPrimary')
-      button.appendChild(rippleRoot)
+      button.classList.add('MuiButtonBase-root', 'MuiButton-root', 'MuiButton-text', 'MuiButton-textPrimary', 'MuiButton-textSizeLarge', 'MuiButton-sizeLarge')
     })
 
     return buttons
@@ -85,18 +82,20 @@ const materializeButtons = selector => {
 }
 
 const materializeContainedButtons = selector => {
-  const buttons = materializeButtons(selector)
-  if (buttons) {
-    console.log({ buttons })
+  if (selector) {
+    const buttons = document.querySelectorAll(selector)
     buttons.forEach(button => {
-      button.classList.add('MuiButton-contained')
+      const label = document.createElement('span')
+
+      label.className = 'MuiButton-label'
+      button.classList.add('MuiButtonBase-root', 'MuiButton-root', 'MuiButton-containedPrimary', 'MuiButton-contained')
     })
 
     return buttons
   }
 }
 
-materializeButtons('${simpleButtons}')
+materializeTextButtons('${textButtons}')
 materializeContainedButtons('${containedButtons}')
 materializeTextFields('${textFields}')
 `

@@ -93,7 +93,7 @@ const script = `
 `
 
 const Test = () => (
-  <Layout script={script} materialSelectors={{ simpleButtons: '.sendNewCode', containedButtons: '#api button:not(.sendNewCode)' }}>
+  <Layout script={script} materialSelectors={{ textFields: '#api .textInput', textButtons: '.sendNewCode', containedButtons: '#api button:not(.sendNewCode)' }}>
     <Button id="backToLoginButton" className="nativeButton" color="tertiary" size="large">Back to login</Button>
     <Button style={{ display: 'none' }} variant="contained" color="tertiary">Test</Button>
     <MuiButton style={{ display: 'none' }} variant="contained" color="primary"><div>Test</div>Test</MuiButton>

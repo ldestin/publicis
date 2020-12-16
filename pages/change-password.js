@@ -15,11 +15,13 @@ export const getServerSideProps = async ({ req, res }) => {
   return { props: {} }
 }
 
-const script = ``
+const script = `
+document.querySelector('.intro p').innerHTML = 'Reset password'
+document.querySelector('#continue').innerHTML = 'Confirm'
+`
 
 const ResetPassword = () => (
   <Layout script={script} materialSelectors={{ textFields: '#api .textInput', containedButtons: '#api button' }}>
-    <Button style={{ display: 'none' }} variant="contained" color="primary">Example</Button>
     <TextField style={{ display: 'none' }} focused error label="Example" helperText="Example" />
     <div id="api"></div>
   </Layout>

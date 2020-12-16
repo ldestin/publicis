@@ -5,11 +5,11 @@ const Header = () => {
   const classes = useStyles()
   return (
     <div className={classes.header}>
-      <div className={classes.backButton}>
+      <div id="backButton" className={classes.backButton}>
         <img className={classes.arrow} src="https://snprfrontendadb2c.blob.core.windows.net/root/Arrow.svg" alt="Back arrow" />
         Back
       </div>
-      <img src="https://snprfrontendadb2c.blob.core.windows.net/root/sonepar logo 2.png" alt="Logo" className={classes.logo} />
+      <img id="logo" src="https://snprfrontendadb2c.blob.core.windows.net/root/sonepar logo 2.png" alt="Logo" className={classes.logo} />
       <a className={classes.contact} href="tel:028030401903">
         <div className={classes.text}>Need help?</div>
         <div className={classes.phone}>

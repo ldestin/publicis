@@ -26,12 +26,11 @@ const script = `
   continueButton.style.display = 'none'
   const changeClaimsButton = document.querySelector('.changeClaims')
   buttons.appendChild(continueButton)
-  document.querySelector('.backButton').addEventListener('click', () => cancelButton.click())
-  document.querySelector('.logo').addEventListener('click', () => cancelButton.click())
+  document.querySelector('#backButton').addEventListener('click', () => cancelButton.click())
+  document.querySelector('#logo').addEventListener('click', () => cancelButton.click())
   const sendNewCode = document.querySelector('.sendNewCode')
   backToLoginButton.addEventListener('click', () => history.back())
   buttons.insertBefore(backToLoginButton, sendButton)
-  const inputs = document.querySelectorAll('.textInput')
   const onVerificationChange = (list, observer) => {
     const attribute = list[0]
 
@@ -72,6 +71,7 @@ const script = `
   changeEmailObserver.observe(changeClaimsButton, { attributes: true })
   verificationObserver.observe(document.querySelector('.VerificationCode'), { attributes: true })
 
+  // const inputs = document.querySelectorAll('.textInput')
   // inputs.forEach(input => {
   //   input.setAttribute('placeholder', '')
   //   const entry = input.closest('.attrEntry')

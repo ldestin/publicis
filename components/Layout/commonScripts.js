@@ -87,9 +87,12 @@ const materializeButtons = selector => {
 const materializeContainedButtons = selector => {
   const buttons = materializeButtons(selector)
   if (buttons) {
+    console.log({ buttons })
     buttons.forEach(button => {
       button.classList.add('MuiButton-contained')
     })
+
+    return buttons
   }
 }
 

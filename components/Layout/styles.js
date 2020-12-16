@@ -84,6 +84,11 @@ export const commonStyles = `
     outline: none;
   }
 
+  .error {
+    color: #F44336;
+    font-size: 12px;
+  }
+
   .verifying-modal {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.54);
@@ -123,6 +128,9 @@ export const commonStyles = `
   .MuiFormLabel-root.MuiInputLabel-formControl.Mui-focused {
     color: #1E5BF6;
   }
+  .MuiFormLabel-root.MuiInputLabel-formControl.Mui-error {
+    color: #F44336;
+  }
 
   button.MuiButtonBase-root:hover,
   button.MuiButtonBase-root:focus {
@@ -145,5 +153,22 @@ export const commonStyles = `
 
   button.MuiButtonBase-root.MuiButton-contained:active {
     background: #5885F9;
+  }
+
+  @media (max-width: 768px) {
+    form {
+      width: 100%;
+    }
+    #api,
+    button.MuiButtonBase-root {
+      width: 100%;
+    }
+    .buttons {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .buttons.reverse {
+      flex-direction: column;
+    }
   }
 `;

@@ -1,6 +1,5 @@
 import React from 'react'
 import Cors from 'cors'
-import MuiButton from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import Layout from '../components/Layout'
 import { Button } from '../components/button'
@@ -72,7 +71,7 @@ const script = `
   verificationObserver.observe(document.querySelector('.VerificationCode'), { attributes: true })
 `
 
-const Test = () => (
+const ResetPassword = () => (
   <Layout script={script} materialSelectors={{ textFields: '#api .textInput', textButtons: '.sendNewCode', containedButtons: '#api button:not(.sendNewCode)' }}>
     <Button style={{ display: 'none' }} variant="contained" color="primary">Example</Button>
     <TextField style={{ display: 'none' }} focused error label="Example" helperText="Example" />
@@ -81,4 +80,4 @@ const Test = () => (
   </Layout>
 )
 
-export default Test
+export default ResetPassword

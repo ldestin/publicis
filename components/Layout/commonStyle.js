@@ -121,11 +121,11 @@ export const commonStyles = `
 
   button.MuiButtonBase-root:hover,
   button.MuiButtonBase-root:focus {
-    background: #083CBF;
+    color: #083CBF;
   }
 
   button.MuiButtonBase-root:active {
-    background: #5885F9;
+    color: #5885F9;
   }
 
   button.MuiButtonBase-root.MuiButton-contained {

@@ -15,7 +15,6 @@ const Layout = ({ children, script, styles }) => {
         <style>{commonStyles}</style>
         {styles && <style>{styles}</style>}
       </Head>
-      <script src="https://snprfrontendadb2c.blob.core.windows.net/root/test.js"></script>
       <Header />
       <div className={classes.apiContainer}>
         {children}

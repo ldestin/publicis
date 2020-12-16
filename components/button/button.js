@@ -11,7 +11,7 @@ export const Button = ({ variant = 'text', color = 'primary', children, ...props
       {...props}
       variant={variant}
       color={color === 'tertiary' ? 'primary' : color}
-      className={clsx(classes.root, {
+      className={clsx(props.className, classes.root, {
         [classes[`${variant}Tertiary`]]: color === 'tertiary',
       })}
     >

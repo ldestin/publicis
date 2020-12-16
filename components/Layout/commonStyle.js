@@ -1,4 +1,4 @@
-export const resetStyles = `
+export const commonStyles = `
   /* ACTIVE DIRECTORY OVERRIDES */
   html, body {
     height: 100%;
@@ -105,7 +105,7 @@ export const resetStyles = `
     margin: 32px 0 !important;
   }
 
-  button.materializedButton {
+  button.MuiButtonBase-root  {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,16 +115,30 @@ export const resetStyles = `
     font-weight: 700;
     letter-spacing: 0.4px;
     text-transform: uppercase;
+    color: #1E5BF6;
     cursor: pointer;
-    background: #1E5BF6;
   }
 
-  button.materializedButton:hover,
-  .materializedButton:focus {
+  .button.MuiButtonBase-root:hover,
+  .button.MuiButtonBase-root:focus {
     background: #083CBF;
   }
 
-  button.materializedButton:active {
+  .button.MuiButtonBase-root:active {
+    background: #5885F9;
+  }
+
+  .button.MuiButtonBase-root.MuiButton-contained {
+    background: #1E5BF6;
+    color: white;
+  }
+
+  .button.MuiButtonBase-root.MuiButton-contained:hover,
+  .button.MuiButtonBase-root.MuiButton-contained:focus {
+    background: #083CBF;
+  }
+
+  .button.MuiButtonBase-root.MuiButton-contained:active {
     background: #5885F9;
   }
 `;

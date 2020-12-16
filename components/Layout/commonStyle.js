@@ -119,26 +119,26 @@ export const commonStyles = `
     cursor: pointer;
   }
 
-  .button.MuiButtonBase-root:hover,
-  .button.MuiButtonBase-root:focus {
+  button.MuiButtonBase-root:hover,
+  button.MuiButtonBase-root:focus {
     background: #083CBF;
   }
 
-  .button.MuiButtonBase-root:active {
+  button.MuiButtonBase-root:active {
     background: #5885F9;
   }
 
-  .button.MuiButtonBase-root.MuiButton-contained {
+  button.MuiButtonBase-root.MuiButton-contained {
     background: #1E5BF6;
     color: white;
   }
 
-  .button.MuiButtonBase-root.MuiButton-contained:hover,
-  .button.MuiButtonBase-root.MuiButton-contained:focus {
+  button.MuiButtonBase-root.MuiButton-contained:hover,
+  button.MuiButtonBase-root.MuiButton-contained:focus {
     background: #083CBF;
   }
 
-  .button.MuiButtonBase-root.MuiButton-contained:active {
+  button.MuiButtonBase-root.MuiButton-contained:active {
     background: #5885F9;
   }
 `;

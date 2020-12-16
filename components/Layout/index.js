@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-import { materialize } from './commonScripts'
+import { materialize } from './scripts'
 import Header from './header';
 import Footer from './footer';
 import { useStyles } from './index.style'
-import { commonStyles } from './commonStyle';
+import { commonStyles } from './styles';
 
 const Layout = ({ children, script, styles, materialSelectors }) => {
   const classes = useStyles()

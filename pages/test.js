@@ -70,34 +70,13 @@ const script = `
 
   changeEmailObserver.observe(changeClaimsButton, { attributes: true })
   verificationObserver.observe(document.querySelector('.VerificationCode'), { attributes: true })
-
-  // const inputs = document.querySelectorAll('.textInput')
-  // inputs.forEach(input => {
-  //   input.setAttribute('placeholder', '')
-  //   const entry = input.closest('.attrEntry')
-  //   entry.classList.add('inputEntry')
-  //   const box = entry.closest('.EmailBox') || entry.closest('.TextBox')
-  //   box.classList.add('inputBox')
-  //   const error = entry.querySelector('.error')
-  //   const label = entry.querySelector(\`[for=\${input.id}\`)
-  //   const onErrorChange = (list, observer) => {
-  //     const errorDiv = list[0].target
-  //     if (errorDiv.innerHTML) {
-  //       entry.classList.add('hasError')
-  //     } else {
-  //       entry.classList.remove('hasError')
-  //     }
-  //   }
-  //   const errorObserver = new MutationObserver(onErrorChange)
-  // })
 `
 
 const Test = () => (
   <Layout script={script} materialSelectors={{ textFields: '#api .textInput', textButtons: '.sendNewCode', containedButtons: '#api button:not(.sendNewCode)' }}>
+    <Button style={{ display: 'none' }} variant="contained" color="primary">Example</Button>
+    <TextField style={{ display: 'none' }} focused error label="Example" helperText="Example" />
     <Button id="backToLoginButton" className="nativeButton" color="tertiary" size="large">Back to login</Button>
-    <Button style={{ display: 'none' }} variant="contained" color="tertiary">Test</Button>
-    <MuiButton style={{ display: 'none' }} variant="contained" color="primary"><div>Test</div>Test</MuiButton>
-    <TextField style={{ display: 'none' }} focused error label="test" helperText="test" />
     <div id="api"></div>
   </Layout>
 )

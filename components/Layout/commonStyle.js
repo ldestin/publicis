@@ -105,16 +105,26 @@ export const resetStyles = `
     margin: 32px 0 !important;
   }
 
-  .materializedButton {
+  button.materializedButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    cursor: pointer;
     background: #1E5BF6;
   }
 
-  .materializedButton:hover,
+  button.materializedButton:hover,
   .materializedButton:focus {
     background: #083CBF;
   }
 
-  .materializedButton:active {
+  button.materializedButton:active {
     background: #5885F9;
   }
 `;

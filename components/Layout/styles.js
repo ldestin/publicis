@@ -119,11 +119,11 @@ export const commonStyles = `
     cursor: pointer;
   }
 
-  .MuiInput-underline:after {
+  .MuiInputBase-root.MuiInput-underline:after {
     border-bottom: 2px solid #1E5BF6;
   }
 
-  .MuiFormLabel-root.Mui-focused,
+  .MuiFormLabel-root.MuiInputLabel-formControl.Mui-focused,
   button.MuiButtonBase-root:hover,
   button.MuiButtonBase-root:focus {
     color: #083CBF;

@@ -102,8 +102,9 @@ materializeTextFields('${textFields}')
 
 const commonScript = `
 const cancelButton = document.querySelector('#cancel')
-document.querySelector('#backButton').addEventListener('click', () => cancelButton.click())
-document.querySelector('#logo').addEventListener('click', () => cancelButton.click())
+const goBack = () => (cancelButton ? cancelButton.click() : history.back())
+document.querySelector('#backButton').addEventListener('click', goBack)
+document.querySelector('#logo').addEventListener('click', goBack)
 `
 
 export default commonScript

@@ -1,12 +1,10 @@
 import React from 'react'
 import Cors from 'cors'
-import TextField from '@material-ui/core/TextField'
 import Layout from '../components/Layout'
 import { Button } from '../components/button'
 
 const cors = Cors({
-  // Only allow requests with GET, POST and OPTIONS
-  methods: ['GET', 'POST', 'OPTIONS'],
+  methods: ['GET', 'OPTIONS'],
 })
 
 export const getServerSideProps = async ({ req, res }) => {
@@ -20,13 +18,10 @@ const script = `
   const intro = document.querySelector('.intro')
   const sendButton = document.querySelector('.sendCode')
   const buttons = sendButton.closest('.buttons')
-  const cancelButton = document.querySelector('#cancel')
   const continueButton = document.querySelector('#continue')
   continueButton.style.display = 'none'
   const changeClaimsButton = document.querySelector('.changeClaims')
   buttons.appendChild(continueButton)
-  document.querySelector('#backButton').addEventListener('click', () => cancelButton.click())
-  document.querySelector('#logo').addEventListener('click', () => cancelButton.click())
   const sendNewCode = document.querySelector('.sendNewCode')
   backToLoginButton.addEventListener('click', () => history.back())
   buttons.insertBefore(backToLoginButton, sendButton)
@@ -73,8 +68,6 @@ const script = `
 
 const ResetPassword = () => (
   <Layout script={script} materialSelectors={{ textFields: '#api .textInput', textButtons: '.sendNewCode', containedButtons: '#api button:not(.sendNewCode)' }}>
-    <Button style={{ display: 'none' }} variant="contained" color="primary">Example</Button>
-    <TextField style={{ display: 'none' }} focused error label="Example" helperText="Example" />
     <Button id="backToLoginButton" className="nativeButton" color="tertiary" size="large">Back to login</Button>
     <div id="api"></div>
   </Layout>

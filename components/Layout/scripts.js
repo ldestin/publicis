@@ -99,3 +99,11 @@ materializeTextButtons('${textButtons}')
 materializeContainedButtons('${containedButtons}')
 materializeTextFields('${textFields}')
 `
+
+const commonScript = `
+const cancelButton = document.querySelector('#cancel')
+document.querySelector('#backButton').addEventListener('click', () => cancelButton.click())
+document.querySelector('#logo').addEventListener('click', () => cancelButton.click())
+`
+
+export default commonScript

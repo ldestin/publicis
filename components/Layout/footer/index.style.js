@@ -13,11 +13,11 @@ export const useStyles = makeStyles((theme) =>
       alignItems: 'center',
       justifyContent: 'space-between',
       width: '100%',
-      padding: '16px',
+      padding: theme.spacing(2),
       minHeight: '80px',
       borderTop: '0.5px solid #E0E0E0',
       [theme.breakpoints.up('sm')]: {
-        padding: '16px 40px',
+        padding: theme.spacing(2, 5),
       },
       [theme.breakpoints.up('md')]: {
         flexDirection: 'unset',
@@ -33,10 +33,23 @@ export const useStyles = makeStyles((theme) =>
       }
     },
     copyright: {
-      marginRight: '16px',
+      marginBottom: theme.spacing(1),
+      marginRight: 0,
+      [theme.breakpoints.up('sm')]: {
+        marginBottom: 0,
+        marginRight: '16px',
+      },
     },
     juridic: {
       display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      marginBottom: theme.spacing(3),
+      [theme.breakpoints.up('md')]: {
+        marginBottom: 0,
+        flexDirection: 'unset',
+        justifyContent: 'space-between',
+      },
     },
     socials: {
       opacity: 0.54,

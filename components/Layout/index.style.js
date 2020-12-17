@@ -10,11 +10,12 @@ export const useStyles = makeStyles((theme) =>
     },
     apiContainer: {
       display: 'flex',
+      flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       flex: 1,
       alignSelf: 'center',
-      padding: '0 24px',
+      padding: theme.spacing(0, 3),
       width: '100%'
     },
   }),

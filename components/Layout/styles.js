@@ -9,6 +9,7 @@ export const commonStyles = `
     flex-direction: column;
     font-family: 'Noto Sans', sans-serif;
     color: rgba(0, 0, 0, 0.87);
+    background: white;
     margin: 0;
   }
 

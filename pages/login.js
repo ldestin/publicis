@@ -1,5 +1,6 @@
 import React from 'react'
 import Cors from 'cors'
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
@@ -7,9 +8,45 @@ import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import { Button } from '../../components/button'
-import Layout from '../../components/Layout'
-import { useStyles } from './index.style'
+import { Button } from '../components/button'
+import Layout from '../components/Layout'
+
+const useStyles = makeStyles((theme) => ({
+  wrapper: {
+    backgroundColor: theme.palette.background.paper,
+  },
+  container: {
+    paddingTop: theme.spacing(4),
+    [theme.breakpoints.up('lg')]: {
+      minHeight: '580px',
+      paddingTop: theme.spacing(10),
+    },
+    backgroundColor: theme.palette.background.paper,
+  },
+  accountButtonLink: {
+    fontWeight: '900',
+    display: 'inline-flex',
+  },
+  footer: {
+    padding: '20px',
+    margin: 'auto',
+    textAlign: 'center',
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(6),
+  },
+  icon: {
+    marginRight: theme.spacing(2),
+  },
+  form: {
+    marginTop: theme.spacing(1),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+  divider: {
+    paddingTop: theme.spacing(3)
+  }
+}));
 
 const cors = Cors({
   methods: ['GET', 'OPTIONS'],

@@ -1,7 +1,7 @@
 import React from 'react'
 import Cors from 'cors'
-import { useStyles } from './index.style'
-import Layout from '../../components/Layout'
+import { makeStyles } from '@material-ui/core/styles';
+import Layout from '../components/Layout'
 
 const cors = Cors({
   methods: ['GET', 'OPTIONS'],
@@ -12,6 +12,12 @@ export const getServerSideProps = async ({ req, res }) => {
 
   return { props: {} }
 }
+
+const useStyles = makeStyles((theme) => ({
+  rules: {
+    fontSize: theme.typography.fontSize.s
+  },
+}))
 
 const script = `
 `

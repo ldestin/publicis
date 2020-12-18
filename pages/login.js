@@ -10,6 +10,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { Button } from '../components/button'
 import Layout from '../components/Layout'
+import DividerWithText from '../components/divider-with-text';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -131,6 +132,7 @@ $('#email').removeAttr('pattern');
 $('#forgotPassword').insertBefore('.working');
 //Error Message
 $('.error.pageLevel p').data('test-id','errorMsgNoMatchingEmail');
+$('#remember').insertBefore('#next')
 `
 
 const Login = () => {
@@ -143,7 +145,7 @@ const Login = () => {
         label="Keep me signed in"
       />
       <div id="api"></div>
-      <div className={classes.divider}>or</div>
+      <DividerWithText>or</DividerWithText>
 
       <Grid direction="column"
         justify="center"

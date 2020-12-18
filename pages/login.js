@@ -66,7 +66,7 @@ const style = `
   margin-bottom: 36px;
 }
 
-.materializedInput:nth-child(1) {
+.materializedInput:nth-child(2) {
   margin-bottom: 8px !important;
 }
 

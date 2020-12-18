@@ -6,8 +6,8 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3)
-
+    paddingBottom: theme.spacing(3),
+    width: "100%",
   },
   border: {
     borderBottom: "2px solid #E0E0E0",

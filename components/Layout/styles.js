@@ -58,7 +58,8 @@ export const commonStyles = `
     list-style-type: none;
   }
 
-  #api {
+  #api,
+  .formContainer {
     width: 420px;
   }
   
@@ -162,6 +163,7 @@ export const commonStyles = `
       width: 100%;
     }
     #api,
+    .formContainer,
     button.MuiButtonBase-root {
       width: 100%;
     }

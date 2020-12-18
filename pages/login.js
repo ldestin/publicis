@@ -145,19 +145,21 @@ const Login = () => {
         label="Keep me signed in"
       />
       <div id="api"></div>
-      <DividerWithText>or</DividerWithText>
+      <div className="formContainer">
+        <DividerWithText>or</DividerWithText>
+        <Grid
+          direction="column"
+          justify="center"
+          alignItems="center"
+          container
+        >
+          <Typography variant="h6" align="center">
+            Don't have one yet?
+          </Typography>
 
-      <Grid direction="column"
-        justify="center"
-        alignItems="center"
-        container
-      >
-        <Typography variant="h6" align="center">
-          Don't have one yet?
-        </Typography>
-
-        <Button className={{ label: classes.accountButtonLink }} color="tertiary">open an account</Button>
-      </Grid>
+          <Button className={{ label: classes.accountButtonLink }} color="tertiary">open an account</Button>
+        </Grid>
+      </div>
     </Layout>
   )
 }

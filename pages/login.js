@@ -63,9 +63,10 @@ const style = `
   font-size: 14px;
   color: rgba(0, 0, 0, 0.54);
   text-decoration: underline;
+  margin-bottom: 36px;
 }
 
-.materializedInput:last-child {
+.materializedInput:nth-child(1) {
   margin-bottom: 8px !important;
 }
 
@@ -115,7 +116,10 @@ label[for='password'] {
 `
 
 const script = `
-$('.intro h2').addClass('customIntro').text('Login to access your account')
+$('.intro').insertBefore('form');
+$('.intro h2')
+  .addClass('customIntro')
+  .text('Login to access your account');
 
 //Email validation changes
 var emailRegex = $('#email').attr('pattern');
@@ -125,8 +129,10 @@ $('#email').removeAttr('pattern');
 $('#forgotPassword').insertBefore('.working');
 //Error Message
 $('.error.pageLevel p').data('test-id','errorMsgNoMatchingEmail');
-//Button
-var btnText = $('#next').text();
+
+$('#remember').insertBefore('#next')
+// //Button
+// var btnText = $('#next').text();
 // $('#next')
 //     .addClass('button-wrapper MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-root-29 makeStyles-containedTertiary-32 MuiButton-containedPrimary').html('<span class="MuiButton-label">' + btnText + '</span><span class="MuiTouchRipple-root"></span>')
 //     .wrap('<div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between">')

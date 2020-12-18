@@ -66,7 +66,7 @@ const materializeTextFields = selector => {
       errorObserver.observe(error, { childList: true })
     })
 
-    if (inputs.length) input[0].focus()
+    if (inputs.length) inputs[0].focus()
 
     return inputs
   }

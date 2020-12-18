@@ -127,10 +127,10 @@ $('#forgotPassword').insertBefore('.working');
 $('.error.pageLevel p').data('test-id','errorMsgNoMatchingEmail');
 //Button
 var btnText = $('#next').text();
-$('#next')
-    .addClass('button-wrapper MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-root-29 makeStyles-containedTertiary-32 MuiButton-containedPrimary').html('<span class="MuiButton-label">' + btnText + '</span><span class="MuiTouchRipple-root"></span>')
-    .wrap('<div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between">')
-    .before('<label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-25 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary" aria-disabled="false"><span class="MuiIconButton-label"><input type="checkbox" class="PrivateSwitchBase-input-28" value="remember" data-indeterminate="false"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">Keep me signed in</span></label>');
+// $('#next')
+//     .addClass('button-wrapper MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-root-29 makeStyles-containedTertiary-32 MuiButton-containedPrimary').html('<span class="MuiButton-label">' + btnText + '</span><span class="MuiTouchRipple-root"></span>')
+//     .wrap('<div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between">')
+//     .before('<label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-25 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary" aria-disabled="false"><span class="MuiIconButton-label"><input type="checkbox" class="PrivateSwitchBase-input-28" value="remember" data-indeterminate="false"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">Keep me signed in</span></label>');
 `
 
 const Login = () => {

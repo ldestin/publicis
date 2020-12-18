@@ -11,6 +11,7 @@ const materializeTextFields = selector => {
     const labelErrorClasses = [errorClassName]
     const rootErrorClasses = [errorClassName]
     const inputs = document.querySelectorAll(selector).forEach(input => {
+      console.log(input.value)
       const control = input.parentNode
       const root = document.createElement('div')
       const label = control.querySelector('label') || document.createElement('label')

@@ -62,7 +62,8 @@ export const commonStyles = `
     width: 420px;
   }
   
-  .intro {
+  .intro,
+  .customIntro {
     text-align: center;
     font-size: 32px;
     font-weight: 500;

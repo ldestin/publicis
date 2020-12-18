@@ -105,27 +105,12 @@ label[for='password'] {
 `
 
 const script = `
-$('.intro p').text('Login to access your account')
-
-// //Handle Form customization
-// $('form').addClass('makeStyles-form-57').attr('novalidate', true);
-
-// //Email customization
-// $('label[for="email"],label[for="password"]').parent('.entry-item').addClass('MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth')
-// $('label[for="email"],label[for="password"]').addClass('MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required');
-
-// $("#email,#password").wrap('<div class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"></div>');
-// $("#email").addClass('MuiInputBase-input MuiInput-input').attr('placeholder', 'Email');
-// $("#password").addClass('MuiInputBase-input MuiInput-input');
+$('.intro h2').addClass('customIntro').text('Login to access your account')
 
 //Email validation changes
 var emailRegex = $('#email').attr('pattern');
 $('#email').removeAttr('pattern');
 
-//Password style changes
-$('.password-label').parent('.entry-item').addClass('password-wrapper MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth');
-//Forgot password
-$('#forgotPassword').insertAfter('.password-wrapper').wrap('<div class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end forgot-password">').addClass('MuiTypography-root MuiLink-root MuiLink-underline MuiTypography-subtitle2 MuiTypography-colorTextSecondary');
 //Error Message
 $('.error.pageLevel p').data('test-id','errorMsgNoMatchingEmail');
 //Button

@@ -141,8 +141,8 @@ const Login = () => {
   return (
     <Layout script={script} style={style} materialSelectors={{ textFields: '#api .textInput', textButtons: '.sendNewCode', containedButtons: '#api button:not(.sendNewCode)' }}>
       <div id="api"></div>
-      <div className={classes.wrapper}>
-        {/* <LoginHeader /> */}
+      {/* <div className={classes.wrapper}>
+        <LoginHeader />
         <Container className={classes.container} maxWidth="xs">
           <Typography component="h1" variant="h4" align="center">
             Log in to your account
@@ -213,7 +213,7 @@ const Login = () => {
           </form>
         </Container>
         <footer className={classes.footer}>&copy; Copyright 2020 Sonepar</footer>
-      </div>
+      </div> */}
     </Layout>
   )
 }

@@ -10,7 +10,9 @@ import { Button } from '../button'
 
 const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
+  console.log('test')
   useEffect(() => {
+    console.log('useEffect')
     debugger
   })
   return (
@@ -21,6 +23,7 @@ const Layout = ({ children, script, style, materialSelectors }) => {
       </Head>
       <Header />
       <div className={classes.apiContainer}>
+        <div ref={() => console.log('ref')}></div>
         {children}
       </div>
       <Footer />

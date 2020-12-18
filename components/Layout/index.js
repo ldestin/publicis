@@ -12,12 +12,14 @@ const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
   const apiHTML = useRef()
   if (process.browser && !apiHTML.current) {
+    document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
     apiHTML.current = document.querySelector('#api')?.innerHTML
   }
 
   useEffect(() => {
-    if (apiHTML.current) {
-      document.querySelector('#api').innerHTML = apiHTML.current
+    const api = document.querySelector('#api')
+    if (apiHTML.current && api) {
+      api.innerHTML = apiHTML.current
     }
   }, [])
   return (
@@ -28,7 +30,6 @@ const Layout = ({ children, script, style, materialSelectors }) => {
       </Head>
       <Header />
       <div className={classes.apiContainer}>
-        <div ref={() => { if (process.browser) console.log('ref', document.querySelector('#api')?.outerHTML) }}></div>
         {children}
       </div>
       <Footer />

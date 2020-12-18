@@ -105,7 +105,7 @@ label[for='password'] {
 `
 
 const script = `
-$('.intro').html('<h1 class="MuiTypography-root MuiTypography-h3 MuiTypography-alignCenter">Login to access your account</h1>')
+$('.intro p').text('Login to access your account')
 
 // //Handle Form customization
 // $('form').addClass('makeStyles-form-57').attr('novalidate', true);
@@ -139,7 +139,7 @@ $('#next')
 const Login = () => {
   const classes = useStyles()
   return (
-    <Layout script={script} style={style} materialSelectors={{ textFields: '#api .textInput', textButtons: '.sendNewCode', containedButtons: '#api button:not(.sendNewCode)' }}>
+    <Layout script={script} style={style} materialSelectors={{ textFields: '#email, #password', containedButtons: '#api button' }}>
       <div id="api"></div>
       {/* <div className={classes.wrapper}>
         <LoginHeader />

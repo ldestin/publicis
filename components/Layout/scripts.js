@@ -31,6 +31,16 @@ const materializeTextFields = selector => {
       root.appendChild(input)
       control.appendChild(inputError)
 
+      const onInputChange = () => {
+        if (input.value) {
+          label.classList.add(...labelFilledClasses)
+        } else {
+          label.classList.remove(labelFilledClassName)
+        }
+      }
+
+      input.addEventListener('change', onInputChange)
+      input.addEventListener('keyup', onInputChange)
       input.addEventListener('focusin', () => {
         root.classList.add(...rootFocusedClasses)
         label.classList.add(...labelFocusedClasses)
@@ -40,14 +50,6 @@ const materializeTextFields = selector => {
         label.classList.remove(focusedClassName)
         if (!input.value) {
           label.classList.remove(labelShrinkClassName)
-        }
-      })
-      input.addEventListener('keyup', (e) => {
-        console.log('keyup', input.value, e.target.value)
-        if (input.value) {
-          label.classList.add(...labelFilledClasses)
-        } else {
-          label.classList.remove(labelFilledClassName)
         }
       })
       const onErrorChange = () => {

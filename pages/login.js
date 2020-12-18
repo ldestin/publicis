@@ -131,14 +131,6 @@ $('#email').removeAttr('pattern');
 $('#forgotPassword').insertBefore('.working');
 //Error Message
 $('.error.pageLevel p').data('test-id','errorMsgNoMatchingEmail');
-
-$('#remember').insertBefore('#next')
-// //Button
-// var btnText = $('#next').text();
-// $('#next')
-//     .addClass('button-wrapper MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-root-29 makeStyles-containedTertiary-32 MuiButton-containedPrimary').html('<span class="MuiButton-label">' + btnText + '</span><span class="MuiTouchRipple-root"></span>')
-//     .wrap('<div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between">')
-//     .before('<label class="MuiFormControlLabel-root"><span class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-25 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary" aria-disabled="false"><span class="MuiIconButton-label"><input type="checkbox" class="PrivateSwitchBase-input-28" value="remember" data-indeterminate="false"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">Keep me signed in</span></label>');
 `
 
 const Login = () => {
@@ -151,79 +143,19 @@ const Login = () => {
         label="Keep me signed in"
       />
       <div id="api"></div>
-      {/* <div className={classes.wrapper}>
-        <LoginHeader />
-        <Container className={classes.container} maxWidth="xs">
-          <Typography component="h1" variant="h4" align="center">
-            Log in to your account
-          </Typography>
-          <form className={classes.form} noValidate>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <Grid container
-              direction="row"
-              justify="flex-end"
-            >
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
+      <div className={classes.divider}>or</div>
 
-            <Grid
-              container
-              direction="row"
-              justify="space-between"
-              alignItems="center"
-            >
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Keep me signed in"
-              />
+      <Grid direction="column"
+        justify="center"
+        alignItems="center"
+        container
+      >
+        <Typography variant="h6" align="center">
+          Don't have one yet?
+        </Typography>
 
-              <Button
-                type="submit"
-                variant="contained"
-                color="tertiary"
-                className={classes.submit}
-              >
-                Log In
-              </Button>
-            </Grid>
-            <div className={classes.divider}>or</div>
-
-            <Grid direction="column"
-              justify="center"
-              alignItems="center"
-              container
-            >
-              <Typography variant="h6" align="center">
-                Don't have one yet?
-              </Typography>
-
-              <Button className={{ label: classes.accountButtonLink }} color="tertiary">open an account</Button>
-            </Grid>
-          </form>
-        </Container>
-        <footer className={classes.footer}>&copy; Copyright 2020 Sonepar</footer>
-      </div> */}
+        <Button className={{ label: classes.accountButtonLink }} color="tertiary">open an account</Button>
+      </Grid>
     </Layout>
   )
 }

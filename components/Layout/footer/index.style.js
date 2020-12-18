@@ -34,10 +34,10 @@ export const useStyles = makeStyles((theme) =>
     },
     copyright: {
       marginBottom: theme.spacing(1),
-      marginRight: 0,
+      marginRight: '16px',
       [theme.breakpoints.up('sm')]: {
         marginBottom: 0,
-        marginRight: '16px',
+        marginRight: 0,
       },
     },
     juridic: {

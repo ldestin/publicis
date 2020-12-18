@@ -36,8 +36,10 @@ export const useStyles = makeStyles((theme) =>
       marginBottom: theme.spacing(1),
       marginRight: '16px',
       [theme.breakpoints.up('sm')]: {
-        marginBottom: 0,
         marginRight: 0,
+      },
+      [theme.breakpoints.up('md')]: {
+        marginBottom: 0,
       },
     },
     juridic: {

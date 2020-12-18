@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import TextField from '@material-ui/core/TextField'
 import Header from './header';
@@ -10,6 +10,9 @@ import { Button } from '../button'
 
 const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
+  useEffect(() => {
+    debugger
+  })
   return (
     <div className={classes.container}>
       <Head>

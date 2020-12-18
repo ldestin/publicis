@@ -14,7 +14,7 @@ const materializeTextFields = selector => {
       const control = input.parentNode
       const root = document.createElement('div')
       const label = control.querySelector('label') || document.createElement('label')
-      const error = control.querySelector('.error.itemLevel')
+      const error = control.querySelector('.error.itemLevel p') || control.querySelector('.error.itemLevel')
       const inputError = document.createElement('p')
 
       control.classList.add('MuiFormControl-root', 'MuiTextField-root', 'materializedInput')

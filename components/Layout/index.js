@@ -21,7 +21,7 @@ const Layout = ({ children, script, style, materialSelectors }) => {
   useEffect(() => {
     const api = document.querySelector('#api')
     if (apiHTML.current && api) {
-      api.innerHTML = apiHTML.current
+      // api.innerHTML = apiHTML.current
     }
   }, [])
   return (

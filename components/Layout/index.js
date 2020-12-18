@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import TextField from '@material-ui/core/TextField'
 import Header from './header';
@@ -10,11 +10,16 @@ import { Button } from '../button'
 
 const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
-  if (process.browser) console.log('test', document.querySelector('#api')?.outerHTML)
+  const apiHTML = useRef()
+  if (process.browser && !apiHTML.current) {
+    apiHTML.current = document.querySelector('#api')?.innerHTML
+  }
+
   useEffect(() => {
-    if (process.browser) console.log('useEffect', document.querySelector('#api')?.outerHTML)
-    debugger
-  })
+    if (apiHTML.current) {
+      document.querySelector('#api').innerHTML = apiHTML.current
+    }
+  }, [])
   return (
     <div className={classes.container}>
       <Head>

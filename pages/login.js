@@ -60,6 +60,8 @@ export const getServerSideProps = async ({ req, res }) => {
 
 const style = `
 #forgotPassword {
+  display: block;
+  text-algn: end;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.54);
   text-decoration: underline;

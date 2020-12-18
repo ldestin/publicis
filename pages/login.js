@@ -144,7 +144,7 @@ const Login = () => {
         control={<Checkbox value="remember" color="primary" />}
         label="Keep me signed in"
       />
-      <div id="api"></div>
+      <div id="api">{process.browser && window.apiHTML}</div>
       <div className="formContainer">
         <DividerWithText>or</DividerWithText>
         <Grid

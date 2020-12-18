@@ -12,8 +12,10 @@ const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
   const apiHTML = useRef()
   if (process.browser && !apiHTML.current) {
+    const api = document.querySelector('#api')
     document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
-    apiHTML.current = document.querySelector('#api')?.innerHTML
+    apiHTML.current = api?.innerHTML
+    window.apiHTML = api?.innerHTML
   }
 
   useEffect(() => {

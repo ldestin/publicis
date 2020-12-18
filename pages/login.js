@@ -59,6 +59,16 @@ export const getServerSideProps = async ({ req, res }) => {
 }
 
 const style = `
+#forgotPassword {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+  text-decoration: underline;
+}
+
+.materializedInput:last-child {
+  margin-bottom: 8px !important;
+}
+
 label[for='email'] {
     opacity: 0
 }
@@ -111,6 +121,8 @@ $('.intro h2').addClass('customIntro').text('Login to access your account')
 var emailRegex = $('#email').attr('pattern');
 $('#email').removeAttr('pattern');
 
+//Forgot password
+$('#forgotPassword').insertBefore('.working');
 //Error Message
 $('.error.pageLevel p').data('test-id','errorMsgNoMatchingEmail');
 //Button
@@ -125,6 +137,11 @@ const Login = () => {
   const classes = useStyles()
   return (
     <Layout script={script} style={style} materialSelectors={{ textFields: '#email, #password', containedButtons: '#api button' }}>
+      <FormControlLabel
+        id="remember"
+        control={<Checkbox value="remember" color="primary" />}
+        label="Keep me signed in"
+      />
       <div id="api"></div>
       {/* <div className={classes.wrapper}>
         <LoginHeader />

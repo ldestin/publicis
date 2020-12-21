@@ -110,6 +110,14 @@ const cancelButton = document.querySelector('#cancel')
 const goBack = () => (cancelButton ? cancelButton.click() : history.back())
 document.querySelector('#backButton').addEventListener('click', goBack)
 document.querySelector('#logo').addEventListener('click', goBack)
+
+$(window).load(() => {
+  console.log('apiload', $('#api').html())
+})
+
+$(document).ready(() => {
+  console.log('ready', $('#api').html())
+})
 `
 
 export default commonScript

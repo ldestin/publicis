@@ -12,6 +12,7 @@ const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
   const apiRef = useRef()
   if (process.browser) {
+    console.log('api', window.$('#api').html())
     // document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
   }
 
@@ -19,8 +20,8 @@ const Layout = ({ children, script, style, materialSelectors }) => {
     const api = document.querySelector('#api')
     console.log(apiRef)
     if (api) {
-      console.log('apiClone', window.apiClone)
-      window.$('#api').replaceWith(window.apiClone)
+      console.log('apiClone2', window.apiClone)
+      // window.$('#api').replaceWith(window.apiClone)
       // api.innerHTML = apiHTML.current
     }
   }, [])

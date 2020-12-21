@@ -141,7 +141,6 @@ if (checkbox.checked) {
   isChecked = true
   remember.classList.add('Mui-checked')
 }
-
 svg.innerHTML = getPath()
 
 remember.addEventListener('click', () => {

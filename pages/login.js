@@ -143,7 +143,8 @@ if (checkbox.checked) {
 }
 svg.innerHTML = getPath()
 
-remember.addEventListener('click', () => {
+remember.addEventListener('click', e => {
+  e.stopPropagation()
   isChecked = !isChecked
   remember.classList.toggle('Mui-checked')
   svg.innerHTML = getPath()

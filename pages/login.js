@@ -145,7 +145,6 @@ svg.innerHTML = getPath()
 
 remember.addEventListener('click', e => {
   e.preventDefault()
-  e.stopPropagation()
   isChecked = !isChecked
   remember.classList.toggle('Mui-checked')
   svg.innerHTML = getPath()
@@ -158,7 +157,7 @@ const Login = () => {
     <Layout script={script} style={style} materialSelectors={{ textFields: '#email, #password', containedButtons: '#api button' }}>
       <FormControlLabel
         id="remember"
-        control={<Checkbox color="primary" checked />}
+        control={<Checkbox color="primary" />}
         label="Keep me signed in"
       />
       <div id="api"></div>

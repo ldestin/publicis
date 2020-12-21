@@ -111,9 +111,7 @@ const goBack = () => (cancelButton ? cancelButton.click() : history.back())
 document.querySelector('#backButton').addEventListener('click', goBack)
 document.querySelector('#logo').addEventListener('click', goBack)
 
-window.addEventListener('DOMContentLoaded', () => {
-  window.apiClone = $('#api').clone(true, true)
-})
+window.apiClone = $('#api').clone(true, true)
 `
 
 export default commonScript

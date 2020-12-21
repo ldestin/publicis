@@ -157,7 +157,7 @@ const Login = () => {
     <Layout script={script} style={style} materialSelectors={{ textFields: '#email, #password', containedButtons: '#api button' }}>
       <FormControlLabel
         id="remember"
-        control={<Checkbox color="primary" />}
+        control={<Checkbox color="primary" checked />}
         label="Keep me signed in"
       />
       <div id="api"></div>

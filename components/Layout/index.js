@@ -13,7 +13,6 @@ const Layout = ({ children, script, style, materialSelectors }) => {
   const apiRef = useRef()
   if (process.browser && !apiRef.current) {
     const apiClone = window.$('#api').clone(true, true)
-    window.$('#api').html('')
     console.log({ apiClone })
     // document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
     apiRef.current = apiClone
@@ -39,7 +38,7 @@ const Layout = ({ children, script, style, materialSelectors }) => {
         {children}
       </div>
       <Footer />
-      <Button style={{ display: 'none' }} variant="contained" color="primary">Example</Button>
+      <Button id="example" onClick={() => console.log('test')} variant="contained" color="primary">Example</Button>
       <TextField style={{ display: 'none' }} focused error label="Example" helperText="Example" />
       <script dangerouslySetInnerHTML={{ __html: commonScript }}></script>
       <script dangerouslySetInnerHTML={{ __html: materialize(materialSelectors) }}></script>

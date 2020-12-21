@@ -111,10 +111,10 @@ const goBack = () => (cancelButton ? cancelButton.click() : history.back())
 document.querySelector('#backButton').addEventListener('click', goBack)
 document.querySelector('#logo').addEventListener('click', goBack)
 
-$(window).load(function() {
-  console.log('loaad')
-  // console.log('apiload', $('#api').html())
-})
+// $(window).load(function() {
+//   console.log('loaad')
+//   // console.log('apiload', $('#api').html())
+// })
 
 $(function() {
   console.log('readyy')

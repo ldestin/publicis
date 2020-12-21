@@ -129,6 +129,26 @@ $('#forgotPassword').insertBefore('.working');
 //Error Message
 $('.error.pageLevel p').data('test-id','errorMsgNoMatchingEmail');
 $('#remember').insertBefore('#next')
+
+const remember = document.getElementById('remember')
+const checkbox = remember.querySelector('input')
+const svg = remember.querySelector('svg')
+let isChecked
+const checkedPath = '<path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>'
+const uncheckedPath = '<path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>'
+const getPath = () => isChecked ? checkedPath : uncheckedPath
+if (checkbox.checked) {
+  isChecked = true
+  remember.classList.add('Mui-checked')
+}
+
+svg.innerHTML = getPath()
+
+remember.addEventListener('click', () => {
+  isChecked = !isChecked
+  remember.classList.toggle('Mui-checked')
+  svg.innerHTML = getPath()
+})
 `
 
 const Login = () => {
@@ -137,7 +157,7 @@ const Login = () => {
     <Layout script={script} style={style} materialSelectors={{ textFields: '#email, #password', containedButtons: '#api button' }}>
       <FormControlLabel
         id="remember"
-        control={<Checkbox value="remember" color="primary" />}
+        control={<Checkbox color="primary" checked />}
         label="Keep me signed in"
       />
       <div id="api"></div>

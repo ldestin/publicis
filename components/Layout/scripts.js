@@ -112,7 +112,7 @@ document.querySelector('#backButton').addEventListener('click', goBack)
 document.querySelector('#logo').addEventListener('click', goBack)
 
 $(window).load(function() {
-  console.log('loaad")
+  console.log('loaad')
   // console.log('apiload', $('#api').html())
 })
 

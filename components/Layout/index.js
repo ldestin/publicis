@@ -19,6 +19,7 @@ const Layout = ({ children, script, style, materialSelectors }) => {
     const api = document.querySelector('#api')
     console.log(apiRef)
     if (apiRef.current && api) {
+      console.log('apiClone', window.apiClone)
       window.$('#api').replaceWith(window.apiClone)
       // api.innerHTML = apiHTML.current
     }

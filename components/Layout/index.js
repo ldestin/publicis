@@ -11,7 +11,8 @@ import { Button } from '../button'
 const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
   const apiRef = useRef()
-  if (process.browser && !apiRef.current) {
+  if (process.browser) {
+    window.apiClone()
     // document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
   }
 

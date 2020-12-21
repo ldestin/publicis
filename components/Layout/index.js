@@ -18,7 +18,7 @@ const Layout = ({ children, script, style, materialSelectors }) => {
   useEffect(() => {
     const api = document.querySelector('#api')
     console.log(apiRef)
-    if (apiRef.current && api) {
+    if (api) {
       console.log('apiClone', window.apiClone)
       window.$('#api').replaceWith(window.apiClone)
       // api.innerHTML = apiHTML.current

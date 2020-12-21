@@ -12,21 +12,14 @@ const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
   const apiRef = useRef()
   if (process.browser && !apiRef.current) {
-    window.addEventListener('DOMContentLoaded', () => {
-      console.log('loaded')
-    })
-    const apiClone = window.$('#api').clone(true, true)
-    console.log({ apiClone })
     // document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
-    apiRef.current = apiClone
-    window.apiClone = apiClone
   }
 
   useEffect(() => {
     const api = document.querySelector('#api')
     console.log(apiRef)
     if (apiRef.current && api) {
-      window.$('#api').replaceWith(apiRef.current)
+      window.$('#api').replaceWith(window.apiClone)
       // api.innerHTML = apiHTML.current
     }
   }, [])

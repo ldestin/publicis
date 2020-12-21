@@ -12,7 +12,7 @@ const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
   const apiRef = useRef()
   if (process.browser && !apiRef.current) {
-    const apiClone = window.$('#api').clone()
+    const apiClone = window.$('#api').clone(true, true)
     console.log({ apiClone })
     // document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
     apiRef.current = apiClone

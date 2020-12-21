@@ -12,7 +12,6 @@ const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
   const apiRef = useRef()
   if (process.browser) {
-    window.cloneApi()
     // document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
   }
 
@@ -41,6 +40,7 @@ const Layout = ({ children, script, style, materialSelectors }) => {
       <script dangerouslySetInnerHTML={{ __html: commonScript }}></script>
       <script dangerouslySetInnerHTML={{ __html: materialize(materialSelectors) }}></script>
       {script && <script dangerouslySetInnerHTML={{ __html: script }}></script>}
+      <script dangerouslySetInnerHTML={{ __html: `window.apiClone = $('#api').clone(true, true)` }}></script>
     </div>
   );
 };

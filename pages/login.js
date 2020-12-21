@@ -90,16 +90,12 @@ label[for='password'] {
     color: rgba(0, 0, 0, 0.54);
 }
 
-.button-wrapper {
-    padding: 10px 16px;
+.buttons {
+  flex-direction: row;
 }
 
-.button-wrapper span {
-    font-weight: 900;
-}
-
-.openaccount-label {
-    font-weight: 900
+#next {
+  width: auto;
 }
 
 .backButtonText.MuiTypography-button {

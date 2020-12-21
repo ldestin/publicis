@@ -1,11 +1,8 @@
 import React from 'react'
 import Cors from 'cors'
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { Button } from '../components/button'
@@ -60,6 +57,7 @@ export const getServerSideProps = async ({ req, res }) => {
   return { props: {} }
 }
 
+// styles to override Active Directory injected form style
 const style = `
 #forgotPassword {
   display: block;
@@ -115,6 +113,7 @@ label[for='password'] {
 }
 `
 
+// script to override Active Directory injected form structure
 const script = `
 $('.intro').insertBefore('form');
 $('.intro h2')

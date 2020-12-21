@@ -14,6 +14,7 @@ export const getServerSideProps = async ({ req, res }) => {
   return { props: {} }
 }
 
+// script to override Active Directory injected form structure
 const script = `
   const backToLoginButton = document.getElementById('backToLoginButton')
   const intro = document.querySelector('.intro')

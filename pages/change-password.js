@@ -16,12 +16,19 @@ export const getServerSideProps = async ({ req, res }) => {
 
 const useStyles = makeStyles((theme) => ({
   rules: {
-    fontSize: theme.typography.fontSize.s
+    fontSize: theme.typography.fontSize.s,
+    textAlign: 'center',
+    color: 'rgba(0, 0, 0, 0.54)'
   },
 }))
 
+// script to override Active Directory injected form structure
 const script = `
-$('.intro').append('#rules')
+  const rules = document.getElementById('rules')
+  const api = document.getElementById('api')
+  const form = document.querySelector('form')
+
+  api.insertBefore(rules, form)
 `
 
 const ResetPassword = () => {

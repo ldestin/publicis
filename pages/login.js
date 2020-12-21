@@ -140,13 +140,12 @@ const Login = () => {
   const classes = useStyles()
   return (
     <Layout script={script} style={style} materialSelectors={{ textFields: '#email, #password', containedButtons: '#api button' }}>
-      <div id="api">
-        <FormControlLabel
-          id="remember"
-          control={<Checkbox value="remember" color="primary" />}
-          label="Keep me signed in"
-        />
-      </div>
+      <FormControlLabel
+        id="remember"
+        control={<Checkbox value="remember" color="primary" />}
+        label="Keep me signed in"
+      />
+      <div id="api"></div>
       <div className="formContainer">
         <DividerWithText>or</DividerWithText>
         <Grid

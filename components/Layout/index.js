@@ -21,7 +21,7 @@ const Layout = ({ children, script, style, materialSelectors }) => {
     console.log(apiRef)
     if (api) {
       console.log('apiClone2', window.apiClone)
-      // window.$('#api').replaceWith(window.apiClone)
+      window.$('#api').replaceWith(window.apiClone)
       // api.innerHTML = apiHTML.current
     }
   }, [])
@@ -41,7 +41,6 @@ const Layout = ({ children, script, style, materialSelectors }) => {
       <script dangerouslySetInnerHTML={{ __html: commonScript }}></script>
       <script dangerouslySetInnerHTML={{ __html: materialize(materialSelectors) }}></script>
       {script && <script dangerouslySetInnerHTML={{ __html: script }}></script>}
-      <script dangerouslySetInnerHTML={{ __html: `window.apiClone = $('#api').clone(true, true)` }}></script>
     </div>
   );
 };

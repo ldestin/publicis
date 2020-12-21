@@ -1,5 +1,5 @@
 module.exports = {
-  // assetPrefix: 'https://publicis-ldestin.herokuapp.com/',
+  assetPrefix: 'https://publicis-ldestin.herokuapp.com/',
   async redirects() {
     return [
       {

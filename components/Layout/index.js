@@ -10,20 +10,23 @@ import { Button } from '../button'
 
 const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
-  // const apiHTML = useRef()
-  // if (process.browser && !apiHTML.current) {
-  //   const api = document.querySelector('#api')
-  //   document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
-  //   apiHTML.current = api?.innerHTML
-  //   window.apiHTML = api?.innerHTML
-  // }
+  const apiRef = useRef()
+  if (process.browser && !apiRef.current) {
+    const apiClone = window.$('#api').clone()
+    console.log({ apiClone })
+    // document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
+    apiRef.current = apiClone
+    window.apiClone = apiClone
+  }
 
-  // useEffect(() => {
-  //   const api = document.querySelector('#api')
-  //   if (apiHTML.current && api) {
-  //     api.innerHTML = apiHTML.current
-  //   }
-  // }, [])
+  useEffect(() => {
+    const api = document.querySelector('#api')
+    console.log(apiRef)
+    if (apiRef.current && api) {
+      window.$('#api').replaceWith(apiRef.current)
+      // api.innerHTML = apiHTML.current
+    }
+  }, [])
   return (
     <div className={classes.container}>
       <Head>

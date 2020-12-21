@@ -37,8 +37,8 @@ class MyDocument extends Document {
         </Head>
         <body>
           <Main />
-          <NextScript /> 
           <script dangerouslySetInnerHTML={{ __html: `window.apiClone = $('#api').clone(true, true)` }}></script>
+          <NextScript /> 
         </body>
       </Html>
     )

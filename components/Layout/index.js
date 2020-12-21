@@ -21,7 +21,7 @@ const Layout = ({ children, script, style, materialSelectors }) => {
     console.log(apiRef)
     if (api) {
       console.log('apiClone2', window.apiClone)
-      window.$('#api').replaceWith(window.apiClone)
+      // window.$('#api').replaceWith(window.apiClone)
       // api.innerHTML = apiHTML.current
     }
   }, [])

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import TextField from '@material-ui/core/TextField'
 import Header from './header';
@@ -10,21 +10,6 @@ import { Button } from '../button'
 
 const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
-  const apiRef = useRef()
-  if (process.browser) {
-    console.log('api', window.$('#api').html())
-    // document.querySelectorAll('script').forEach(script => console.log(script.outerHTML))
-  }
-
-  useEffect(() => {
-    const api = document.querySelector('#api')
-    console.log(apiRef)
-    if (api) {
-      console.log('apiClone2', window.apiClone)
-      // window.$('#api').replaceWith(window.apiClone)
-      // api.innerHTML = apiHTML.current
-    }
-  }, [])
   return (
     <div className={classes.container}>
       <Head>
@@ -36,8 +21,10 @@ const Layout = ({ children, script, style, materialSelectors }) => {
         {children}
       </div>
       <Footer />
-      <Button id="example" onClick={() => console.log('test')} variant="contained" color="primary">Example</Button>
+      {/* we need to insert these components for material-ui to inject its styles server side */}
+      <Button style={{ display: 'none' }}  variant="contained" color="primary">Example</Button>
       <TextField style={{ display: 'none' }} focused error label="Example" helperText="Example" />
+
       <script dangerouslySetInnerHTML={{ __html: commonScript }}></script>
       <script dangerouslySetInnerHTML={{ __html: materialize(materialSelectors) }}></script>
       {script && <script dangerouslySetInnerHTML={{ __html: script }}></script>}

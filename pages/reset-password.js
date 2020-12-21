@@ -8,6 +8,7 @@ const cors = Cors({
 })
 
 export const getServerSideProps = async ({ req, res }) => {
+  // we need to enable CORS for active directory to query this page
   await cors(req, res, () => {})
 
   return { props: {} }
@@ -30,6 +31,7 @@ const script = `
 
     if (attribute.attributeName === 'aria-hidden') {
       const box = list[0].target
+      // when verification box is hidden, we are in the reset password form
       if (box.getAttribute('aria-hidden') === 'false') {
         intro.innerHTML = 'Confirmation code'
         backToLoginButton.style.display = 'none'
@@ -45,8 +47,9 @@ const script = `
     const attribute = list[0]
 
     if (attribute.attributeName === 'aria-hidden') {
-      const box = list[0].target
-      if (box.getAttribute('aria-hidden') === 'false') {
+      const button = list[0].target
+      // when claims button is hidden, we go on email verified part
+      if (button.getAttribute('aria-hidden') === 'false') {
         const emailInput = document.getElementById('email')
         emailInput.disabled = true
         intro.innerHTML = 'Email verified'

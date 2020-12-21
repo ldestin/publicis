@@ -8,6 +8,7 @@ const cors = Cors({
 })
 
 export const getServerSideProps = async ({ req, res }) => {
+  // we need to enable CORS for active directory to query this page
   await cors(req, res, () => {})
 
   return { props: {} }
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const script = `
+$('.intro').append('#rules')
 `
 
 const ResetPassword = () => {

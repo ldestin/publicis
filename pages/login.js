@@ -54,6 +54,7 @@ const cors = Cors({
 })
 
 export const getServerSideProps = async ({ req, res }) => {
+  // we need to enable CORS for active directory to query this page
   await cors(req, res, () => {})
 
   return { props: {} }
@@ -144,44 +145,7 @@ const Login = () => {
         control={<Checkbox value="remember" color="primary" />}
         label="Keep me signed in"
       />
-      {/* <div id="api"></div> */}
-      <div id="api" data-name="Unified">
-        <div class="intro">
-            <h2 class="customIntro">Login to access your account</h2>
-          </div><form id="localAccountForm" action="JavaScript:void(0);" class="localAccount" aria-label="Sign in with your email address">
-          
-          <div class="error pageLevel" aria-hidden="true" role="alert">
-            <p></p>
-          </div>
-          <div class="entry">
-            <div class="entry-item MuiFormControl-root MuiTextField-root materializedInput">
-              
-              <div class="error itemLevel" aria-hidden="true" role="alert">
-                
-              </div>
-              <label for="email" class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-focused">
-                Email Address
-              </label><div class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl Mui-focused"><p></p><input type="email" id="email" name="Email Address" placeholder="" value="" class="MuiInputBase-input MuiInput-input"/></div>
-            <p class="MuiFormHelperText-root Mui-error MuiFormHelperText-filled"></p></div>
-            <div class="entry-item MuiFormControl-root MuiTextField-root materializedInput">
-              <div class="password-label">
-                
-                
-              </div>
-              <div class="error itemLevel" aria-hidden="true">
-                
-              </div>
-              <label for="password" class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated">Password</label><div class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"><p role="alert"></p><input type="password" id="password" name="Password" placeholder="" class="MuiInputBase-input MuiInput-input"/></div>
-            <p class="MuiFormHelperText-root Mui-error MuiFormHelperText-filled"></p></div>
-            <a id="forgotPassword">Forgot your password?</a><div class="working"></div>
-
-
-            <div class="buttons">
-              <label class="MuiFormControlLabel-root" id="remember"><span class="MuiButtonBase-root MuiIconButton-root jss18 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary" aria-disabled="false"><span class="MuiIconButton-label"><input type="checkbox" class="jss21" value="remember" data-indeterminate="false"/><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></svg></span></span><span class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1">Keep me signed in</span></label><button id="next" type="submit" form="localAccountForm" class="MuiButtonBase-root MuiButton-root MuiButton-containedPrimary MuiButton-contained">LOGIN</button>
-            </div>
-          </div>
-        </form>
-      </div>
+      <div id="api"></div>
       <div className="formContainer">
         <DividerWithText>or</DividerWithText>
         <Grid

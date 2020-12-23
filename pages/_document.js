@@ -6,7 +6,7 @@ import router from 'next/router'
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const { req, res } = ctx
-    const isLayout = req.url.startsWith('/test')
+    // const isLayout = req.url.startsWith('/test')
     const sheets = new ServerStyleSheets();
     const originalRenderPage = ctx.renderPage;
 
@@ -19,7 +19,7 @@ class MyDocument extends Document {
     // const router = useRouter()
     return {
       ...initialProps,
-      isLayout,
+      // isLayout,
       styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()]
     }
   }

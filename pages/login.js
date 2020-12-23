@@ -52,7 +52,11 @@ const cors = Cors({
 
 export const getServerSideProps = async ({ req, res }) => {
   // we need to enable CORS for active directory to query this page
-  await cors(req, res)
+  await cors(req, res, (result) => {
+    if (result instanceof Error) {
+      console.error(result);
+    }
+  });
 
   return { props: {} }
 }

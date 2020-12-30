@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import uuid from 'uuid';
 import TextField from '@material-ui/core/TextField'
 import Header from './header';
 import Footer from './footer';
@@ -10,9 +11,11 @@ import { Button } from '../button'
 
 const Layout = ({ children, script, style, materialSelectors }) => {
   const classes = useStyles()
+  const nonce = Buffer.from(uuid()).toString('base64')
   return (
     <div className={classes.container}>
       <Head>
+        <meta property="csp-nonce" content={nonce} />
         <style>{commonStyles}</style>
         {style && <style>{style}</style>}
       </Head>
